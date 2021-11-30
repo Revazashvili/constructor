@@ -1,0 +1,21 @@
+<#@ template language="C#" #>
+<#@ assembly name="$(TargetDir)\Constructor.Core.dll"#>
+<#@ import namespace="Models" #>
+
+using System;
+using System.Collections.Generic;
+
+namespace <#= EntityOptions.Namespace #>
+{
+    public class <#= EntityOptions.Name#>
+    {
+        <# foreach(var property in EntityOptions.Properties) {#>
+        public <#= property.Type#> <#= property.Name#> {get; <# if(!EntityOptions.IsTable) {#>private<#}#> set;}
+        <#}#>
+}
+}
+
+
+<#+
+    public EntityOptions EntityOptions { get; set; }
+#>
