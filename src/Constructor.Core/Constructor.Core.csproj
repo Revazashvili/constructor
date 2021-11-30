@@ -13,6 +13,11 @@
         <DesignTime>True</DesignTime>
         <DependentUpon>Entity.tt</DependentUpon>
       </Compile>
+      <Compile Update="Templates\EntityConfiguration.cs">
+        <AutoGen>True</AutoGen>
+        <DesignTime>True</DesignTime>
+        <DependentUpon>EntityConfiguration.tt</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -20,9 +25,14 @@
         <Generator>TextTemplatingFilePreprocessor</Generator>
         <LastGenOutput>Entity.cs</LastGenOutput>
       </None>
+      <None Update="Templates\EntityConfiguration.tt">
+        <Generator>TextTemplatingFilePreprocessor</Generator>
+        <LastGenOutput>EntityConfiguration.cs</LastGenOutput>
+      </None>
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
       <PackageReference Include="System.CodeDom" Version="6.0.0" />
     </ItemGroup>
 

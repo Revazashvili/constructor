@@ -1,9 +1,15 @@
+
+using System;
+using System.Collections.Generic;
+
 namespace TestClient.Entities
 {
     public class Test
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-    }
+                public int Id {get;  set;}
+                public string FirstName {get;  set;}
+                public string LastName {get;  set;}
+        }
 }
+
+

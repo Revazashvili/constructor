@@ -1,0 +1,42 @@
+<#@ template language="C#" #>
+<#@ assembly name="$(TargetDir)\Constructor.Core.dll"#>
+<#@ import namespace="Models" #>
+<#@ import namespace="System.Linq" #>
+
+using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace <#= EntityOptions.Namespace #>
+{
+    public class <#= EntityOptions.Name#>Configuration : IEntityTypeConfiguration<<#= EntityOptions.Name#>>
+    {
+        public void Configure(EntityTypeBuilder<<#= EntityOptions.Name#>> builder)
+        {
+            <# if(EntityOptions.IsTable) {#>
+            builder.ToTable("<#= EntityOptions.TableOrViewName#>","<#= EntityOptions.SchemaName#>");
+            <#} else {#>
+            builder.ToView("<#= EntityOptions.TableOrViewName#>","<#= EntityOptions.SchemaName#>");
+            <#}#>
+             <# if(EntityOptions.Properties.Any(x => x.IsPrimaryKey)) {#>
+            builder.HasKey(x => x.<#= EntityOptions.Properties.FirstOrDefault(x=>x.IsPrimaryKey)!.Name#>).HasName("<#=EntityOptions.Properties.FirstOrDefault(x=>x.IsPrimaryKey)!.ColumnName#>");
+            <#}#>
+            <#
+                var primaryKeyProperty = EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!;
+                EntityOptions.Properties.Remove(primaryKeyProperty);
+            #>
+            <# foreach(var property in EntityOptions.Properties) {#>
+            builder.Property(x => x.<#= property.Name#>)
+                    .HasColumnName("<#= property.ColumnName#>")
+                    .HasPrecision(<#= property.Precision#>,<#= property.Scale#>)
+                    <# if(property.IsRequired) {#>.IsRequired()<#}#><# if(property.MaxLength > 0) {#>.HasMaxLength(<#= property.MaxLength#>)<#}#><# if(property.IsUnicode) {#>.IsUnicode()<#}#>;
+            <#}#>
+        }
+    }
+}
+
+
+<#+
+    public EntityOptions EntityOptions { get; set; }
+#>
