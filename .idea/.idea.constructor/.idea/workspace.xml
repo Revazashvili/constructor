@@ -8,28 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConfigurationConstructor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConstructor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/IEntityConfigurationConstructor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/IEntityConstructor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/CreateEntityConfigurationOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/CreateEntityOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/EntityConfigurationCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/EntityCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/IEntityConfigurationCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/IEntityCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Managers/FileManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Managers/IFileManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Providers/EntityOptionsProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Providers/IEntityOptionsProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.tt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/OneToOneRelationship.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructor.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructor.Core.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/EntityOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/EntityOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Providers/EntityOptionsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Providers/EntityOptionsProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.tt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.tt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/Configurations/TestConfiguration.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Entities/Test.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +36,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21dS1Z3sTsq7rikzx2ouKHCMeld" />
@@ -63,6 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Functions" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -96,7 +87,7 @@
       <updated>1638269263496</updated>
       <workItem from="1638269271990" duration="92000" />
       <workItem from="1638269428387" duration="237000" />
-      <workItem from="1638269694804" duration="12755000" />
+      <workItem from="1638269694804" duration="16661000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -126,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638276681455</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="builds simple entity and configuration files">
+      <created>1638287461862</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638287461862</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +147,7 @@
     <MESSAGE value="add rider stuff in gitignore" />
     <MESSAGE value="add sln file" />
     <MESSAGE value="add some test code" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some test code" />
+    <MESSAGE value="builds simple entity and configuration files" />
+    <option name="LAST_COMMIT_MESSAGE" value="builds simple entity and configuration files" />
   </component>
 </project>

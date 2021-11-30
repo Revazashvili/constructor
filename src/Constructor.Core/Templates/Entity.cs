@@ -9,7 +9,7 @@
 // ------------------------------------------------------------------------------
 namespace Constructor.Core.Templates
 {
-    using Models;
+    using Constructor.Core.Models;
     using System;
     
     /// <summary>
@@ -43,42 +43,85 @@ namespace Constructor.Core.Templates
             this.Write("\r\n    {\r\n        ");
             
             #line 12 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
- foreach(var property in EntityOptions.Properties) {
+
+    foreach (var property in EntityOptions.Properties)
+    {
+
             
             #line default
             #line hidden
             this.Write("        public ");
             
-            #line 13 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 16 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Type));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 13 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 16 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Name));
             
             #line default
             #line hidden
             this.Write(" {get; ");
             
-            #line 13 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
- if(!EntityOptions.IsTable) {
+            #line 16 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+        if (!EntityOptions.IsTable)
+        {
+
             
             #line default
             #line hidden
             this.Write("private");
             
-            #line 13 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
-}
+            #line 19 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write(" set;}\r\n        ");
             
-            #line 14 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
-}
+            #line 22 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    }
+
+            
+            #line default
+            #line hidden
+            this.Write("        ");
+            
+            #line 25 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    foreach (var property in EntityOptions.OneToOneRelationships)
+    {
+
+            
+            #line default
+            #line hidden
+            this.Write("        public ");
+            
+            #line 29 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(property.FkEntity));
+            
+            #line default
+            #line hidden
+            this.Write(" ");
+            
+            #line 29 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(property.FkEntity));
+            
+            #line default
+            #line hidden
+            this.Write(" {get; set;}\r\n        ");
+            
+            #line 30 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    }
+
             
             #line default
             #line hidden
@@ -86,7 +129,7 @@ namespace Constructor.Core.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 19 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
+        #line 37 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\Entity.tt"
 
     public EntityOptions EntityOptions { get; set; }
 

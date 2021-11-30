@@ -1,5 +1,3 @@
-using Constructor.Core.Models;
-
 namespace Constructor.Core.Creators
 {
     public interface IEntityCreator

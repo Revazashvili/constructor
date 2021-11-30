@@ -2,7 +2,8 @@ namespace Constructor.Core.Models
 {
     public class PropertyOptions
     {
-        public PropertyOptions(string name, string columnName, string type, bool isPrimaryKey, bool isRequired, int maxLength, int precision, int scale, bool isUnicode)
+        public PropertyOptions(string name, string columnName, string type, bool isPrimaryKey, bool isRequired,
+            int maxLength, int precision, int scale, bool isUnicode)
         {
             Name = name;
             ColumnName = columnName;

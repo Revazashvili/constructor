@@ -8,7 +8,7 @@ namespace Constructor.Core.Creators
         private readonly IEntityConstructor _entityConstructor;
         private readonly IFileManager _fileManager;
 
-        public EntityCreator(IEntityConstructor entityConstructor,IFileManager fileManager)
+        public EntityCreator(IEntityConstructor entityConstructor, IFileManager fileManager)
         {
             _entityConstructor = entityConstructor;
             _fileManager = fileManager;

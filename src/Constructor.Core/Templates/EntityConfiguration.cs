@@ -9,8 +9,8 @@
 // ------------------------------------------------------------------------------
 namespace Constructor.Core.Templates
 {
-    using Models;
     using System.Linq;
+    using Constructor.Core.Models;
     using System;
     
     /// <summary>
@@ -58,176 +58,264 @@ namespace Constructor.Core.Templates
             this.Write("> builder)\r\n        {\r\n            ");
             
             #line 17 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- if(EntityOptions.IsTable) {
+
+    if (EntityOptions.IsTable)
+    {
+
             
             #line default
             #line hidden
             this.Write("            builder.ToTable(\"");
             
-            #line 18 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 21 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.TableOrViewName));
             
             #line default
             #line hidden
             this.Write("\",\"");
             
-            #line 18 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 21 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.SchemaName));
             
             #line default
             #line hidden
             this.Write("\");\r\n            ");
             
-            #line 19 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-} else {
+            #line 22 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    }
+    else
+    {
+
             
             #line default
             #line hidden
             this.Write("            builder.ToView(\"");
             
-            #line 20 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 27 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.TableOrViewName));
             
             #line default
             #line hidden
             this.Write("\",\"");
             
-            #line 20 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 27 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.SchemaName));
             
             #line default
             #line hidden
             this.Write("\");\r\n            ");
             
-            #line 21 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
+            #line 28 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    }
+
             
             #line default
             #line hidden
             this.Write("             ");
             
-            #line 22 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- if(EntityOptions.Properties.Any(x => x.IsPrimaryKey)) {
+            #line 31 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    if (EntityOptions.Properties.Any(x => x.IsPrimaryKey))
+    {
+
             
             #line default
             #line hidden
             this.Write("            builder.HasKey(x => x.");
             
-            #line 23 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.Properties.FirstOrDefault(x=>x.IsPrimaryKey)!.Name));
+            #line 35 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!.Name));
             
             #line default
             #line hidden
             this.Write(").HasName(\"");
             
-            #line 23 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.Properties.FirstOrDefault(x=>x.IsPrimaryKey)!.ColumnName));
+            #line 36 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!.ColumnName));
             
             #line default
             #line hidden
             this.Write("\");\r\n            ");
             
-            #line 24 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
-            
-            #line default
-            #line hidden
-            this.Write("            ");
-            
-            #line 25 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 38 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
-                var primaryKeyProperty = EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!;
-                EntityOptions.Properties.Remove(primaryKeyProperty);
-            
+    }
+
             
             #line default
             #line hidden
             this.Write("            ");
             
-            #line 29 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- foreach(var property in EntityOptions.Properties) {
+            #line 41 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    var primaryKeyProperty = EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!;
+    EntityOptions.Properties.Remove(primaryKeyProperty);
+
+            
+            #line default
+            #line hidden
+            this.Write("            ");
+            
+            #line 45 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    foreach (var property in EntityOptions.Properties)
+    {
+
             
             #line default
             #line hidden
             this.Write("            builder.Property(x => x.");
             
-            #line 30 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 49 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Name));
             
             #line default
             #line hidden
             this.Write(")\r\n                    .HasColumnName(\"");
             
-            #line 31 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 50 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.ColumnName));
             
             #line default
             #line hidden
             this.Write("\")\r\n                    .HasPrecision(");
             
-            #line 32 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 51 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Precision));
             
             #line default
             #line hidden
             this.Write(",");
             
-            #line 32 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 51 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Scale));
             
             #line default
             #line hidden
             this.Write(")\r\n                    ");
             
-            #line 33 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- if(property.IsRequired) {
+            #line 52 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        if (property.IsRequired)
+        {
+
             
             #line default
             #line hidden
             this.Write(".IsRequired()");
             
-            #line 33 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
+            #line 55 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        }
+
             
             #line default
             #line hidden
             
-            #line 33 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- if(property.MaxLength > 0) {
+            #line 57 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        if (property.MaxLength > 0)
+        {
+
             
             #line default
             #line hidden
             this.Write(".HasMaxLength(");
             
-            #line 33 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 60 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.MaxLength));
             
             #line default
             #line hidden
             this.Write(")");
             
-            #line 33 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
+            #line 60 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        }
+
             
             #line default
             #line hidden
             
-            #line 33 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- if(property.IsUnicode) {
+            #line 62 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        if (property.IsUnicode)
+        {
+
             
             #line default
             #line hidden
             this.Write(".IsUnicode()");
             
-            #line 33 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
+            #line 65 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write(";\r\n            ");
             
-            #line 34 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
+            #line 68 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    }
+
+            
+            #line default
+            #line hidden
+            this.Write("            ");
+            
+            #line 71 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    foreach (var relationship in EntityOptions.OneToOneRelationships)
+    {
+
+            
+            #line default
+            #line hidden
+            this.Write("            builder.HasOne(x => x.");
+            
+            #line 75 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(relationship.FkEntity));
+            
+            #line default
+            #line hidden
+            this.Write(")\r\n                    .WithOne(x => x.");
+            
+            #line 76 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(relationship.PkEntity));
+            
+            #line default
+            #line hidden
+            this.Write(")\r\n                    .HasForeignKey<");
+            
+            #line 77 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(relationship.PkEntity));
+            
+            #line default
+            #line hidden
+            this.Write(">(x => x.");
+            
+            #line 77 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(relationship.FkProperty));
+            
+            #line default
+            #line hidden
+            this.Write(")\r\n                    .OnDelete(DeleteBehavior.");
+            
+            #line 78 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(relationship.DeleteBehavior));
+            
+            #line default
+            #line hidden
+            this.Write(");\r\n            ");
+            
+            #line 79 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+    }
+
             
             #line default
             #line hidden
@@ -235,7 +323,7 @@ namespace Constructor.Core.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 40 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+        #line 87 "C:\Projects\NetCore\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
     public EntityOptions EntityOptions { get; set; }
 

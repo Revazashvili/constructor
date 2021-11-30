@@ -8,18 +8,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Constructor.Core\Constructor.Core.csproj" />
+        <ProjectReference Include="..\Constructor.Core\Constructor.Core.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Configurations" />
-      <Folder Include="Entities" />
+        <Folder Include="Configurations"/>
+        <Folder Include="Entities"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Devart.Data.Oracle.EFCore" Version="9.14.1382" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
-      <PackageReference Include="System.CodeDom" Version="6.0.0" />
+        <PackageReference Include="Devart.Data.Oracle.EFCore" Version="9.14.1382"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0"/>
+        <PackageReference Include="System.CodeDom" Version="6.0.0"/>
     </ItemGroup>
 
 </Project>

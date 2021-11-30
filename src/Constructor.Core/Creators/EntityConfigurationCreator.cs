@@ -8,7 +8,8 @@ namespace Constructor.Core.Creators
         private readonly IEntityConfigurationConstructor _entityConfigurationConstructor;
         private readonly IFileManager _fileManager;
 
-        public EntityConfigurationCreator(IEntityConfigurationConstructor entityConfigurationConstructor,IFileManager fileManager)
+        public EntityConfigurationCreator(IEntityConfigurationConstructor entityConfigurationConstructor,
+            IFileManager fileManager)
         {
             _entityConfigurationConstructor = entityConfigurationConstructor;
             _fileManager = fileManager;
@@ -16,9 +17,11 @@ namespace Constructor.Core.Creators
 
         public void Create(CreateEntityConfigurationOptions createEntityConfigurationOptions)
         {
-            var construction = _entityConfigurationConstructor.Construct(createEntityConfigurationOptions.EntityOptions);
-            var pathToFile = $@"{createEntityConfigurationOptions.Path}\{createEntityConfigurationOptions.EntityOptions.Name}Configuration.cs";
-            _fileManager.Save(pathToFile,construction);
+            var construction =
+                _entityConfigurationConstructor.Construct(createEntityConfigurationOptions.EntityOptions);
+            var pathToFile =
+                $@"{createEntityConfigurationOptions.Path}\{createEntityConfigurationOptions.EntityOptions.Name}Configuration.cs";
+            _fileManager.Save(pathToFile, construction);
         }
     }
 }
