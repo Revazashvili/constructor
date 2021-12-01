@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Constructor.Core.Constructors;
+using Constructor.Core;
 using Constructor.Core.Creators;
-using Constructor.Core.Managers;
 using Constructor.Core.Models;
 using Constructor.Core.Providers;
 using Microsoft.EntityFrameworkCore;
@@ -12,12 +11,8 @@ const string configurationFolderPath = @"C:\Projects\NetCore\constructor\src\Tes
 Console.WriteLine("Start building...");
 var entityOptionsProvider = new EntityOptionsProvider();
 var entityOptions = entityOptionsProvider.Provide();
-
-var fileManager = new FileManager();
-var entityConstructor = new EntityConstructor();
-var entityConfigurationConstructor = new EntityConfigurationConstructor();
-var entityCreator = new EntityCreator(entityConstructor, fileManager);
-var entityConfigurationCreator = new EntityConfigurationCreator(entityConfigurationConstructor, fileManager);
+var entityCreator = CreatorProvider.GetEntityCreator();
+var entityConfigurationCreator = CreatorProvider.GetEntityConfigurationCreator();
 
 entityCreator.Create(new CreateEntityOptions(entityOptions, entitiesFolderPath));
 entityConfigurationCreator.Create(new CreateEntityConfigurationOptions(entityOptions, configurationFolderPath));

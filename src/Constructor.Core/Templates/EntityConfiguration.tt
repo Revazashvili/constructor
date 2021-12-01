@@ -33,8 +33,8 @@ namespace <#= EntityOptions.Namespace #>
     {
 #>
             builder.HasKey(x => x.<#=
-                EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!.Name #>).HasName("<#=
-                EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!.ColumnName #>");
+            EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!.Name #>).HasName("<#=
+            EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!.ColumnName #>");
             <#
     }
 #>
