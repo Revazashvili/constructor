@@ -7,13 +7,20 @@
     <projectFile>src/TestClient/TestClient.csproj</projectFile>
     <projectFile>FsharpTestClient/FsharpTestClient.fsproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/markdown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constructor.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Constructor.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FsharpTestClient/FsharpTestClient.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/FsharpTestClient/FsharpTestClient.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructor.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructor.Core.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Configurations/TestConfiguration.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Entities/Test.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/Entities/Test2.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +42,9 @@
     <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="21dS1Z3sTsq7rikzx2ouKHCMeld" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,9 +58,14 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Functions" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.FsharpTestClient">
@@ -103,6 +118,8 @@
       <workItem from="1638269428387" duration="237000" />
       <workItem from="1638269694804" duration="16661000" />
       <workItem from="1638381946163" duration="677000" />
+      <workItem from="1638787881455" duration="202000" />
+      <workItem from="1638794588661" duration="1683000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -155,7 +172,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

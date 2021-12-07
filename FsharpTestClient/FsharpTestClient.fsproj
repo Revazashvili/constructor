@@ -2,15 +2,16 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Program.fs"/>
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\src\Constructor.Core\Constructor.Core.csproj"/>
+        <ProjectReference Include="..\src\Constructor.Core\Constructor.Core.csproj" />
     </ItemGroup>
 
 </Project>
