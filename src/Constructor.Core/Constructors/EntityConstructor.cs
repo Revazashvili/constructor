@@ -7,7 +7,7 @@ namespace Constructor.Core.Constructors
     {
         public string Construct(EntityOptions entityOptions)
         {
-            var entity = new Entity { EntityOptions = entityOptions };
+            var entity = new Entity {EntityOptions = entityOptions};
             return entity.TransformText();
         }
     }

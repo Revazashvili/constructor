@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Program.fs" />
+        <Compile Include="Program.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\src\Constructor.Core\Constructor.Core.csproj" />
+        <ProjectReference Include="..\src\Constructor.Core\Constructor.Core.csproj"/>
     </ItemGroup>
 
 </Project>

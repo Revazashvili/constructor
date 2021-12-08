@@ -14,12 +14,12 @@ namespace Constructor.Core
 
         public static EntityCreator GetEntityCreator()
         {
-            return new(EntityConstructor, FileManager);
+            return new EntityCreator(EntityConstructor, FileManager);
         }
 
         public static EntityConfigurationCreator GetEntityConfigurationCreator()
         {
-            return new(EntityConfigurationConstructor, FileManager);
+            return new EntityConfigurationCreator(EntityConfigurationConstructor, FileManager);
         }
     }
 }

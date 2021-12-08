@@ -16,7 +16,7 @@ namespace Constructor.Core.Creators
 
         public void Create(CreateEntityOptions createEntityOptions)
         {
-            string construction = _entityConstructor.Construct(createEntityOptions.EntityOptions);
+            var construction = _entityConstructor.Construct(createEntityOptions.EntityOptions);
             var pathToFile = $@"{createEntityOptions.Path}\{createEntityOptions.EntityOptions.Name}.cs";
             _fileManager.Save(pathToFile, construction);
         }

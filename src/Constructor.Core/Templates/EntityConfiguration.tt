@@ -1,7 +1,7 @@
 <#@ template language="C#" #>
 <#@ assembly name="$(TargetDir)\Constructor.Core.dll"#>
 <#@ import namespace="System.Linq" #>
-<#@ import namespace="Constructor.Core.Models" #>
+<#@ import namespace="Models" #>
 
 using System;
 using System.Collections.Generic;
@@ -40,7 +40,7 @@ namespace <#= EntityOptions.Namespace #>
 #>
             <#
     var primaryKeyProperty = EntityOptions.Properties.FirstOrDefault(x => x.IsPrimaryKey)!;
-    EntityOptions.Properties.Remove(primaryKeyProperty);
+    EntityOptions.Properties.ToList().Remove(primaryKeyProperty);
 #>
             <#
     foreach (var property in EntityOptions.Properties)
@@ -72,10 +72,32 @@ namespace <#= EntityOptions.Namespace #>
     foreach (var relationship in EntityOptions.OneToOneRelationships)
     {
 #>
-            builder.HasOne(x => x.<#= relationship.FkEntity #>)
-                    .WithOne(x => x.<#= relationship.PkEntity #>)
-                    .HasForeignKey<<#= relationship.PkEntity #>>(x => x.<#= relationship.FkProperty #>)
+            builder.HasOne(x => x.<#= relationship.RightEntity #>)
+                    .WithOne(x => x.<#= relationship.LeftEntity #>)
+                    .HasForeignKey<<#= relationship.LeftEntity #>>(x => x.<#= relationship.FkProperty #>)
+                    <# if (relationship.IsRequired) {#>.IsRequired()<#}#>
                     .OnDelete(DeleteBehavior.<#= relationship.DeleteBehavior #>);
+            <#
+    }
+#>
+        <#
+    foreach (var relationship in EntityOptions.OneToManyRelationships)
+    {
+#>
+            builder.HasMany(x => x.<#= relationship.RightEntity #>)
+                    .WithOne(x => x.<#= relationship.LeftEntity #>)
+                    .HasForeignKey(x => x.<#= relationship.FkProperty #>)
+                    <# if (relationship.IsRequired) {#>.IsRequired()<#}#>
+                    .OnDelete(DeleteBehavior.<#= relationship.DeleteBehavior #>);
+            <#
+    }
+#>
+<#
+    foreach (var relationship in EntityOptions.ManyToManyRelationships)
+    {
+#>
+            builder.HasMany(x => x.<#= relationship.LeftEntity #>)
+                    .WithMany(x => x.<#= relationship.RightEntity #>);
             <#
     }
 #>

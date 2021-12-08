@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Constructor.Core.Models
 {
-    public class OneToOneRelationship
+    public class OneToManyRelationship
     {
-        public OneToOneRelationship(
+        public OneToManyRelationship(
             string leftEntity,
             string rightEntity,
             string fkProperty,
