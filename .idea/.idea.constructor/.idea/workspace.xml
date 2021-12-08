@@ -8,36 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/ManyToManyRelationships.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/OneToManyRelationship.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/Entities/Customer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/Entities/CustomerResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/IConnectionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/IDatabaseRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/Table.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/OracleConnectionManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/OracleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/PrefixRemovers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/SuffixRemovers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FsharpTestClient/FsharpTestClient.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/FsharpTestClient/FsharpTestClient.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructor.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructor.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConfigurationConstructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConfigurationConstructor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConstructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConstructor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/CreatorProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/CreatorProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/EntityCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/EntityCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/EntityOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/EntityOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/OneToOneRelationship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/OneToOneRelationship.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Providers/EntityOptionsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Providers/EntityOptionsProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.tt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.tt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.tt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.tt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="big changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +113,7 @@
       <workItem from="1638950228558" duration="401000" />
       <workItem from="1638950718441" duration="2134000" />
       <workItem from="1638952983637" duration="933000" />
-      <workItem from="1638963861329" duration="3012000" />
+      <workItem from="1638963861329" duration="3314000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -186,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638856303858</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="big changes">
+      <created>1638967407320</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1638967407320</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +189,8 @@
     <MESSAGE value="add some test code" />
     <MESSAGE value="builds simple entity and configuration files" />
     <MESSAGE value="downgrade to .Net 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="downgrade to .Net 5" />
+    <MESSAGE value="big changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="big changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
