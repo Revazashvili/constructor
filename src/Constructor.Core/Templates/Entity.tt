@@ -3,7 +3,6 @@
 <#@ import namespace="Models" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="Humanizer" #>
-
 using System;
 using System.Collections.Generic;
 

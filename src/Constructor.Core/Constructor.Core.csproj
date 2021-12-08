@@ -18,6 +18,11 @@
             <DesignTime>True</DesignTime>
             <DependentUpon>EntityConfiguration.tt</DependentUpon>
         </Compile>
+        <Compile Update="Templates\Context.cs">
+          <AutoGen>True</AutoGen>
+          <DesignTime>True</DesignTime>
+          <DependentUpon>Context.tt</DependentUpon>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -28,6 +33,10 @@
         <None Update="Templates\EntityConfiguration.tt">
             <Generator>TextTemplatingFilePreprocessor</Generator>
             <LastGenOutput>EntityConfiguration.cs</LastGenOutput>
+        </None>
+        <None Update="Templates\Context.tt">
+          <Generator>TextTemplatingFilePreprocessor</Generator>
+          <LastGenOutput>Context.cs</LastGenOutput>
         </None>
     </ItemGroup>
 

@@ -1,0 +1,21 @@
+<#@ template language="C#" #>
+<#@ assembly name="$(TargetDir)\Constructor.Core.dll"#>
+<#@ import namespace="Models" #>
+using System.Reflection;
+using Microsoft.EntityFrameworkCore;
+
+namespace <#= ContextOptions.Namespace #>
+{
+    public class <#= ContextOptions.Name #>
+    {
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            base.OnModelCreating(modelBuilder);
+        }
+    }
+}
+
+<#+
+    public ContextOptions ContextOptions { get; set; }
+#>
