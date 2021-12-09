@@ -10,6 +10,7 @@
 namespace Constructor.Core.Templates
 {
     using Models;
+    using Humanizer;
     using System;
     
     /// <summary>
@@ -26,25 +27,79 @@ namespace Constructor.Core.Templates
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using System.Reflection;\r\nusing Microsoft.EntityFrameworkCore;\r\n\r\nnamespace ");
+            this.Write("using System;\r\nusing System.Reflection;\r\nusing System.Collections.Generic;\r\nusing Microsoft.EntityFrameworkCore;\r\nusing ");
             
-            #line 7 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+            #line 9 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(ContextOptions.EntitiesNamespace));
+            
+            #line default
+            #line hidden
+            this.Write(";\r\n\r\nnamespace ");
+            
+            #line 11 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContextOptions.Namespace));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n    public class ");
             
-            #line 9 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+            #line 13 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContextOptions.Name));
             
             #line default
             #line hidden
-            this.Write("\r\n    {\r\n        protected override void OnModelCreating(ModelBuilder modelBuilder)\r\n        {\r\n            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());\r\n            base.OnModelCreating(modelBuilder);\r\n        }\r\n    }\r\n}\r\n\r\n");
+            this.Write(" : DbContext\r\n    {\r\n        public ");
+            
+            #line 15 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(ContextOptions.Name));
+            
+            #line default
+            #line hidden
+            this.Write("(DbContextOptions<");
+            
+            #line 15 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(ContextOptions.Name));
+            
+            #line default
+            #line hidden
+            this.Write("> options) : base(options) { }\r\n\r\n        ");
+            
+            #line 17 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+
+    foreach (var entity in ContextOptions.Entities)
+    {
+
+            
+            #line default
+            #line hidden
+            this.Write("        public DbSet<");
+            
+            #line 21 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(entity));
+            
+            #line default
+            #line hidden
+            this.Write("> ");
+            
+            #line 21 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(entity.Pluralize()));
+            
+            #line default
+            #line hidden
+            this.Write(" { get; set; }\r\n");
+            
+            #line 22 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+
+    }
+
+            
+            #line default
+            #line hidden
+            this.Write("\r\n        protected override void OnModelCreating(ModelBuilder modelBuilder)\r\n        {\r\n            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());\r\n            base.OnModelCreating(modelBuilder);\r\n        }\r\n    }\r\n}\r\n\r\n");
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 19 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
+        #line 34 "D:\Projects\constructor\src\Constructor.Core\Templates\Context.tt"
 
     public ContextOptions ContextOptions { get; set; }
 

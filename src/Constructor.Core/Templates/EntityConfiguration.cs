@@ -10,7 +10,7 @@
 namespace Constructor.Core.Templates
 {
     using System.Linq;
-    using Models;
+    using Constructor.Core.Models;
     using System;
     
     /// <summary>
@@ -306,27 +306,32 @@ namespace Constructor.Core.Templates
             this.Write(")\r\n                    ");
             
             #line 78 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- if (relationship.IsRequired) {
+
+        if (relationship.IsRequired)
+        {
+
             
             #line default
             #line hidden
             this.Write(".IsRequired()");
             
-            #line 78 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
+            #line 81 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write("                    .OnDelete(DeleteBehavior.");
             
-            #line 79 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 84 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(relationship.DeleteBehavior));
             
             #line default
             #line hidden
             this.Write(");\r\n            ");
             
-            #line 80 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 85 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
     }
 
@@ -335,7 +340,7 @@ namespace Constructor.Core.Templates
             #line hidden
             this.Write("        ");
             
-            #line 83 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 88 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
     foreach (var relationship in EntityOptions.OneToManyRelationships)
     {
@@ -345,49 +350,54 @@ namespace Constructor.Core.Templates
             #line hidden
             this.Write("            builder.HasMany(x => x.");
             
-            #line 87 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 92 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(relationship.RightEntity));
             
             #line default
             #line hidden
             this.Write(")\r\n                    .WithOne(x => x.");
             
-            #line 88 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 93 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(relationship.LeftEntity));
             
             #line default
             #line hidden
             this.Write(")\r\n                    .HasForeignKey(x => x.");
             
-            #line 89 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 94 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(relationship.FkProperty));
             
             #line default
             #line hidden
             this.Write(")\r\n                    ");
             
-            #line 90 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
- if (relationship.IsRequired) {
+            #line 95 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        if (relationship.IsRequired)
+        {
+
             
             #line default
             #line hidden
             this.Write(".IsRequired()");
             
-            #line 90 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
-}
+            #line 98 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write("                    .OnDelete(DeleteBehavior.");
             
-            #line 91 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 101 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(relationship.DeleteBehavior));
             
             #line default
             #line hidden
             this.Write(");\r\n            ");
             
-            #line 92 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 102 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
     }
 
@@ -395,7 +405,7 @@ namespace Constructor.Core.Templates
             #line default
             #line hidden
             
-            #line 95 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 105 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
     foreach (var relationship in EntityOptions.ManyToManyRelationships)
     {
@@ -405,21 +415,21 @@ namespace Constructor.Core.Templates
             #line hidden
             this.Write("            builder.HasMany(x => x.");
             
-            #line 99 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 109 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(relationship.LeftEntity));
             
             #line default
             #line hidden
             this.Write(")\r\n                    .WithMany(x => x.");
             
-            #line 100 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 110 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(relationship.RightEntity));
             
             #line default
             #line hidden
             this.Write(");\r\n            ");
             
-            #line 101 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+            #line 111 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
     }
 
@@ -430,7 +440,7 @@ namespace Constructor.Core.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 109 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
+        #line 119 "D:\Projects\constructor\src\Constructor.Core\Templates\EntityConfiguration.tt"
 
     public EntityOptions EntityOptions { get; set; }
 

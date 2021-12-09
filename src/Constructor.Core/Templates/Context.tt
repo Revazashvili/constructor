@@ -1,13 +1,28 @@
 <#@ template language="C#" #>
 <#@ assembly name="$(TargetDir)\Constructor.Core.dll"#>
 <#@ import namespace="Models" #>
+<#@ import namespace="Humanizer" #>
+using System;
 using System.Reflection;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using <#= ContextOptions.EntitiesNamespace #>;
 
 namespace <#= ContextOptions.Namespace #>
 {
-    public class <#= ContextOptions.Name #>
+    public class <#= ContextOptions.Name #> : DbContext
     {
+        public <#= ContextOptions.Name #>(DbContextOptions<<#= ContextOptions.Name #>> options) : base(options) { }
+
+        <#
+    foreach (var entity in ContextOptions.Entities)
+    {
+#>
+        public DbSet<<#= entity#>> <#= entity.Pluralize() #> { get; set; }
+<#
+    }
+#>
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

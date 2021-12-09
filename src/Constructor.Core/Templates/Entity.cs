@@ -9,8 +9,8 @@
 // ------------------------------------------------------------------------------
 namespace Constructor.Core.Templates
 {
-    using Models;
     using System.Linq;
+    using Constructor.Core.Models;
     using Humanizer;
     using System;
     
@@ -45,147 +45,177 @@ namespace Constructor.Core.Templates
             this.Write("\r\n    {\r\n        ");
             
             #line 13 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
- if(EntityOptions.CollectionEntities.Any()) {
+
+    if (EntityOptions.CollectionEntities.Any())
+    {
+
             
             #line default
             #line hidden
             this.Write("        public ");
             
-            #line 14 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 17 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(EntityOptions.Name));
             
             #line default
             #line hidden
             this.Write("()\r\n        {\r\n            ");
             
-            #line 16 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-foreach (var entity in EntityOptions.CollectionEntities){
+            #line 19 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+        foreach (var entity in EntityOptions.CollectionEntities)
+        {
+
             
             #line default
             #line hidden
             this.Write("            ");
             
-            #line 17 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 23 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Pluralize()));
             
             #line default
             #line hidden
             this.Write(" = new HashSet<");
             
-            #line 17 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 23 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity));
             
             #line default
             #line hidden
             this.Write(">();\r\n            ");
             
-            #line 18 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-}
+            #line 24 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write("        }");
             
-            #line 19 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
- } 
+            #line 27 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    }
+
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 20 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-foreach (var property in EntityOptions.Properties){
+            #line 30 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    foreach (var property in EntityOptions.Properties)
+    {
+
             
             #line default
             #line hidden
             this.Write("        public ");
             
-            #line 21 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 34 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Type));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 21 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 34 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(property.Name));
             
             #line default
             #line hidden
             this.Write(" {get; ");
             
-            #line 21 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
- if (!EntityOptions.IsTable) { 
+            #line 34 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+        if (!EntityOptions.IsTable)
+        {
+
             
             #line default
             #line hidden
             this.Write("private ");
             
-            #line 21 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
- }
+            #line 37 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write(" set;}\r\n        ");
             
-            #line 22 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-}
+            #line 40 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    }
+
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 23 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-foreach (var entity in EntityOptions.OneEntities){
+            #line 43 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    foreach (var entity in EntityOptions.OneEntities)
+    {
+
             
             #line default
             #line hidden
-            this.Write("            public ");
+            this.Write("        public ");
             
-            #line 24 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 47 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 24 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 47 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity));
             
             #line default
             #line hidden
-            this.Write(" {get; set;}\r\n            ");
+            this.Write(" {get; set;}\r\n        ");
             
-            #line 25 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-}
+            #line 48 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    }
+
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 26 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-foreach (var entity in EntityOptions.CollectionEntities){
+            #line 51 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    foreach (var entity in EntityOptions.CollectionEntities)
+    {
+
             
             #line default
             #line hidden
-            this.Write("            public ICollection<");
+            this.Write("        public ICollection<");
             
-            #line 27 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 55 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity));
             
             #line default
             #line hidden
             this.Write("> ");
             
-            #line 27 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+            #line 55 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entity.Pluralize()));
             
             #line default
             #line hidden
-            this.Write(" {get; set;}\r\n            ");
+            this.Write(" {get; set;}\r\n        ");
             
-            #line 28 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
-}
+            #line 56 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+
+    }
+
             
             #line default
             #line hidden
@@ -193,7 +223,7 @@ foreach (var entity in EntityOptions.CollectionEntities){
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 33 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
+        #line 63 "D:\Projects\constructor\src\Constructor.Core\Templates\Entity.tt"
 
     public EntityOptions EntityOptions { get; set; }
 

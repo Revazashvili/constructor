@@ -1,7 +1,7 @@
 <#@ template language="C#" #>
 <#@ assembly name="$(TargetDir)\Constructor.Core.dll"#>
-<#@ import namespace="Models" #>
 <#@ import namespace="System.Linq" #>
+<#@ import namespace="Constructor.Core.Models" #>
 <#@ import namespace="Humanizer" #>
 using System;
 using System.Collections.Generic;
@@ -10,22 +10,52 @@ namespace <#= EntityOptions.Namespace #>
 {
     public class <#= EntityOptions.Name #>
     {
-        <# if(EntityOptions.CollectionEntities.Any()) {#>
+        <#
+    if (EntityOptions.CollectionEntities.Any())
+    {
+#>
         public <#= EntityOptions.Name #>()
         {
-            <#foreach (var entity in EntityOptions.CollectionEntities){#>
+            <#
+        foreach (var entity in EntityOptions.CollectionEntities)
+        {
+#>
             <#= entity.Pluralize() #> = new HashSet<<#= entity #>>();
-            <#}#>
-        }<# } #>
-        <#foreach (var property in EntityOptions.Properties){#>
-        public <#= property.Type #> <#= property.Name #> {get; <# if (!EntityOptions.IsTable) { #>private <# }#> set;}
-        <#}#>
-        <#foreach (var entity in EntityOptions.OneEntities){#>
-            public <#= entity #> <#= entity #> {get; set;}
-            <#}#>
-        <#foreach (var entity in EntityOptions.CollectionEntities){#>
-            public ICollection<<#= entity #>> <#= entity.Pluralize() #> {get; set;}
-            <#}#>
+            <#
+        }
+#>
+        }<#
+    }
+#>
+        <#
+    foreach (var property in EntityOptions.Properties)
+    {
+#>
+        public <#= property.Type #> <#= property.Name #> {get; <#
+        if (!EntityOptions.IsTable)
+        {
+#>private <#
+        }
+#> set;}
+        <#
+    }
+#>
+        <#
+    foreach (var entity in EntityOptions.OneEntities)
+    {
+#>
+        public <#= entity #> <#= entity #> {get; set;}
+        <#
+    }
+#>
+        <#
+    foreach (var entity in EntityOptions.CollectionEntities)
+    {
+#>
+        public ICollection<<#= entity #>> <#= entity.Pluralize() #> {get; set;}
+        <#
+    }
+#>
     }
 }
 

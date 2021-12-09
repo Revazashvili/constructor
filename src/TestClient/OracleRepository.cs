@@ -32,7 +32,7 @@ namespace TestClient
                     FROM all_constraints cons NATURAL JOIN all_cons_columns cols
                     WHERE cons.constraint_type = 'P' and cols.COLUMN_NAME=t.COLUMN_NAME AND table_name = UPPER(:table_name )) then 1 else 0 end IsPrimary
                      from user_tab_columns t where t.TABLE_NAME=:table_name ";
-            var columns = connection.Query<Column>(sql,new { table_name = tableName}).AsEnumerable();
+            var columns = connection.Query<Column>(sql, new {table_name = tableName}).AsEnumerable();
             _connectionManager.CloseConnection(connection);
             return new Table(columns);
         }

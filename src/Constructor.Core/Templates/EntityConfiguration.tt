@@ -1,7 +1,7 @@
 <#@ template language="C#" #>
 <#@ assembly name="$(TargetDir)\Constructor.Core.dll"#>
 <#@ import namespace="System.Linq" #>
-<#@ import namespace="Models" #>
+<#@ import namespace="Constructor.Core.Models" #>
 
 using System;
 using System.Collections.Generic;
@@ -75,7 +75,12 @@ namespace <#= EntityOptions.Namespace #>
             builder.HasOne(x => x.<#= relationship.RightEntity #>)
                     .WithOne(x => x.<#= relationship.LeftEntity #>)
                     .HasForeignKey<<#= relationship.LeftEntity #>>(x => x.<#= relationship.FkProperty #>)
-                    <# if (relationship.IsRequired) {#>.IsRequired()<#}#>
+                    <#
+        if (relationship.IsRequired)
+        {
+#>.IsRequired()<#
+        }
+#>
                     .OnDelete(DeleteBehavior.<#= relationship.DeleteBehavior #>);
             <#
     }
@@ -87,7 +92,12 @@ namespace <#= EntityOptions.Namespace #>
             builder.HasMany(x => x.<#= relationship.RightEntity #>)
                     .WithOne(x => x.<#= relationship.LeftEntity #>)
                     .HasForeignKey(x => x.<#= relationship.FkProperty #>)
-                    <# if (relationship.IsRequired) {#>.IsRequired()<#}#>
+                    <#
+        if (relationship.IsRequired)
+        {
+#>.IsRequired()<#
+        }
+#>
                     .OnDelete(DeleteBehavior.<#= relationship.DeleteBehavior #>);
             <#
     }

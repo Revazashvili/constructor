@@ -12,14 +12,10 @@ namespace Constructor.Core
         private static readonly IEntityConfigurationConstructor EntityConfigurationConstructor =
             new EntityConfigurationConstructor();
 
-        public static EntityCreator GetEntityCreator()
-        {
-            return new EntityCreator(EntityConstructor, FileManager);
-        }
+        private static readonly IContextConstructor ContextConstructor = new ContextConstructor();
 
-        public static EntityConfigurationCreator GetEntityConfigurationCreator()
-        {
-            return new EntityConfigurationCreator(EntityConfigurationConstructor, FileManager);
-        }
+        public static EntityCreator GetEntityCreator() => new EntityCreator(EntityConstructor, FileManager);
+        public static EntityConfigurationCreator GetEntityConfigurationCreator() => new EntityConfigurationCreator(EntityConfigurationConstructor, FileManager);
+        public static ContextCreator GetContextCreator() => new ContextCreator(ContextConstructor, FileManager);
     }
 }
