@@ -8,9 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="add Context.tt">
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/ContextConstructor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Constructors/IContextConstructor.cs" afterDir="false" />
+    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="add ContextConstructor.cs">
+      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/ContextCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/CreateContextOptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/IContextCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +120,7 @@
       <workItem from="1638950718441" duration="2134000" />
       <workItem from="1638952983637" duration="933000" />
       <workItem from="1638963861329" duration="4753000" />
-      <workItem from="1638969010124" duration="1997000" />
+      <workItem from="1638969010124" duration="4205000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -190,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638971326334</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add ContextConstructor.cs">
+      <created>1638971539281</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638971539281</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +228,8 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="fix GetTableInfo query" />
     <MESSAGE value="add Context.tt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Context.tt" />
+    <MESSAGE value="add ContextConstructor.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ContextConstructor.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
