@@ -16,14 +16,14 @@ namespace Constructor.Core.Models
             IsUnicode = isUnicode;
         }
 
-        public string Name { get; set; }
-        public string ColumnName { get; set; }
-        public string Type { get; set; }
-        public bool IsPrimaryKey { get; set; }
-        public bool IsRequired { get; set; }
-        public int MaxLength { get; set; }
-        public int Precision { get; set; }
-        public int Scale { get; set; }
-        public bool IsUnicode { get; set; }
+        public string Name { get; }
+        public string ColumnName { get; }
+        public string Type { get; }
+        public bool IsPrimaryKey { get; }
+        public bool IsRequired { get; }
+        public int MaxLength { get; }
+        public int Precision { get; }
+        public int Scale { get; }
+        public bool IsUnicode { get; }
     }
 }

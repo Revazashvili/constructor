@@ -1,6 +1,6 @@
 using Constructor.Core.Models;
 
-namespace Constructor.Core.Creators
+namespace Constructor.Core.Creators.Options
 {
     public class CreateEntityConfigurationOptions
     {

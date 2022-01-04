@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Text.Json;
 using Constructor.Core;
+using Constructor.Core.Constructors;
 using Constructor.Core.Creators;
+using Constructor.Core.Creators.Options;
+using Constructor.Core.Managers;
 using Constructor.Core.Models;
 using Constructor.Core.Providers;
+using Constructor.Infrastructure.Constructors;
+using Constructor.Infrastructure.Creators;
+using Constructor.Infrastructure.Managers;
+using Constructor.Infrastructure.Providers;
 
 const string entitiesFolderPath = @"D:\Projects\constructor\src\TestClient\Entities";
 const string configurationFolderPath = @"D:\Projects\constructor\src\TestClient\Configurations";
@@ -11,9 +18,17 @@ const string contextFolderPath = @"D:\Projects\constructor\src\TestClient";
 Console.WriteLine("Start building...");
 var entityOptionsProvider = new EntityOptionsProvider();
 var entityOptions = entityOptionsProvider.Provide();
-var entityCreator = CreatorProvider.GetEntityCreator();
-var entityConfigurationCreator = CreatorProvider.GetEntityConfigurationCreator();
-var contextCreator = CreatorProvider.GetContextCreator();
+IFileManager fileManager = new FileManager();
+
+IEntityConstructor entityConstructor = new EntityConstructor();
+IEntityCreator entityCreator = new EntityCreator(entityConstructor, fileManager);
+
+IEntityConfigurationConstructor entityConfigurationConstructor = new EntityConfigurationConstructor();
+IEntityConfigurationCreator entityConfigurationCreator = new EntityConfigurationCreator(entityConfigurationConstructor,fileManager);
+
+IContextConstructor contextConstructor = new ContextConstructor();
+IContextCreator contextCreator = new ContextCreator(contextConstructor,fileManager);
+
 
 entityCreator.Create(new CreateEntityOptions(entityOptions, entitiesFolderPath));
 entityConfigurationCreator.Create(new CreateEntityConfigurationOptions(entityOptions, configurationFolderPath));

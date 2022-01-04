@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using Constructor.Core.Models;
+using Constructor.Core.Providers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Constructor.Core.Providers
+namespace Constructor.Infrastructure.Providers
 {
     public class EntityOptionsProvider : IEntityOptionsProvider
     {

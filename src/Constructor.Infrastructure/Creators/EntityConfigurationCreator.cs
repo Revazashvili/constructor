@@ -1,7 +1,9 @@
 using Constructor.Core.Constructors;
+using Constructor.Core.Creators;
+using Constructor.Core.Creators.Options;
 using Constructor.Core.Managers;
 
-namespace Constructor.Core.Creators
+namespace Constructor.Infrastructure.Creators
 {
     public class EntityConfigurationCreator : IEntityConfigurationCreator
     {

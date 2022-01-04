@@ -1,7 +1,8 @@
+using Constructor.Core.Constructors;
 using Constructor.Core.Models;
 using Constructor.Core.Templates;
 
-namespace Constructor.Core.Constructors
+namespace Constructor.Infrastructure.Constructors
 {
     public class ContextConstructor : IContextConstructor
     {

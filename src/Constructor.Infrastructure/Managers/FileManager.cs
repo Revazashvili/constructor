@@ -1,6 +1,7 @@
 using System.IO;
+using Constructor.Core.Managers;
 
-namespace Constructor.Core.Managers
+namespace Constructor.Infrastructure.Managers
 {
     public class FileManager : IFileManager
     {
