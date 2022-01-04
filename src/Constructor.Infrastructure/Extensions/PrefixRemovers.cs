@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Text;
 
-namespace TestClient
+namespace Constructor.Infrastructure.Extensions
 {
     public static class PrefixRemovers
     {

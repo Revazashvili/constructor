@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using TestClient.Models;
+using Constructor.Core.Models;
 
-namespace TestClient
+namespace Constructor.Core.Repositories
 {
     public interface IDatabaseRepository
     {

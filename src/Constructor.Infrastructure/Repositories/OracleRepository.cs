@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using Constructor.Core.Managers;
+using Constructor.Core.Models;
+using Constructor.Core.Repositories;
 using Dapper;
-using TestClient.Models;
 
-namespace TestClient
+namespace Constructor.Infrastructure.Repositories
 {
     public class OracleRepository : IDatabaseRepository
     {

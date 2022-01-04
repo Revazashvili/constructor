@@ -11,29 +11,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/Column.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestClient/OracleTypeToCsharpTypeMapper.cs" afterDir="false" />
+    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="separate existing interfaces and implementations">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constructor.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Constructor.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructors/ContextConstructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Constructors/ContextConstructor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConfigurationConstructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Constructors/EntityConfigurationConstructor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Constructors/EntityConstructor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Constructors/EntityConstructor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/CreatorProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/CreatorProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/ContextCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Creators/ContextCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/CreateContextOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/Options/CreateContextOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/CreateEntityConfigurationOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/Options/CreateEntityConfigurationOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/CreateEntityOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/Options/CreateEntityOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/EntityConfigurationCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Creators/EntityConfigurationCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/EntityCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Creators/EntityCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/IContextCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/IContextCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/IEntityConfigurationCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/IEntityConfigurationCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Creators/IEntityCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Creators/IEntityCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Managers/FileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Managers/FileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/EntityOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/EntityOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Providers/EntityOptionsProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Providers/EntityOptionsProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Models/Table.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Infrastructure/Constructor.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Constructor.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/IConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Managers/IConnectionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/IDatabaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/Models/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Table.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/OracleConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Managers/OracleConnectionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/OracleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" afterDir="false" />
     </list>
@@ -148,6 +135,7 @@
       <workItem from="1639849354474" duration="1087000" />
       <workItem from="1640179640376" duration="779000" />
       <workItem from="1640871740556" duration="1504000" />
+      <workItem from="1641304330465" duration="559000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -247,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639042748213</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="separate existing interfaces and implementations">
+      <created>1641304588085</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1641304588085</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +275,7 @@
     <MESSAGE value="add ContextCreator.cs" />
     <MESSAGE value="set up Context.tt" />
     <MESSAGE value="CibContext.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="CibContext.cs" />
+    <MESSAGE value="separate existing interfaces and implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="separate existing interfaces and implementations" />
   </component>
 </project>

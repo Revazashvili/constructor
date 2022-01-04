@@ -11,10 +11,11 @@ using Constructor.Infrastructure.Constructors;
 using Constructor.Infrastructure.Creators;
 using Constructor.Infrastructure.Managers;
 using Constructor.Infrastructure.Providers;
+using Constructor.Infrastructure.Repositories;
 
-const string entitiesFolderPath = @"D:\Projects\constructor\src\TestClient\Entities";
-const string configurationFolderPath = @"D:\Projects\constructor\src\TestClient\Configurations";
-const string contextFolderPath = @"D:\Projects\constructor\src\TestClient";
+const string entitiesFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Entities";
+const string configurationFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Configurations";
+const string contextFolderPath = @"D:\Projects\constructor\src\GeneratedModels\TestClient";
 Console.WriteLine("Start building...");
 var entityOptionsProvider = new EntityOptionsProvider();
 var entityOptions = entityOptionsProvider.Provide();
@@ -35,12 +36,13 @@ entityConfigurationCreator.Create(new CreateEntityConfigurationOptions(entityOpt
 contextCreator.Create(new CreateContextOptions(new ContextOptions
 {
     Name = "CibContext",
-    Namespace = "TestClient",
-    EntitiesNamespace = "TestClient.Entities",
+    Namespace = "GeneratedModels.TestClient",
+    EntitiesNamespace = "TestClient.GeneratedModels.Entities",
     Entities = new[] {"Test", "Customer", "CustomerResponse"}
 }, contextFolderPath));
 
 Console.WriteLine("Done");
+
 // var x = new EntityOptions
 // {
 //     Name = "Test2",

@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace TestClient
+namespace Constructor.Core.Managers
 {
     public interface IConnectionManager
     {

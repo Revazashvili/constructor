@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace TestClient.Models
+namespace Constructor.Core.Models
 {
     public class Table
     {

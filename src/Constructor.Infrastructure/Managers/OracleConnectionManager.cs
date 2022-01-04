@@ -1,7 +1,8 @@
 using System.Data;
+using Constructor.Core.Managers;
 using Oracle.ManagedDataAccess.Client;
 
-namespace TestClient
+namespace Constructor.Infrastructure.Managers
 {
     public class OracleConnectionManager : IConnectionManager
     {

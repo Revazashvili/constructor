@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace TestClient
+namespace Constructor.Infrastructure.Extensions
 {
     public static class SuffixRemovers
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace TestClient
+namespace Constructor.Infrastructure.Extensions
 {
     public class OracleTypeToCsharpTypeMapper
     {
