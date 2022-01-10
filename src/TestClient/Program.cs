@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using Constructor.Infrastructure.Creators;
 using Constructor.Infrastructure.Managers;
 using Constructor.Infrastructure.Providers;
 using Constructor.Infrastructure.Repositories;
+using Humanizer;
 
 // const string entitiesFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Entities";
 // const string configurationFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Configurations";
@@ -78,7 +80,34 @@ namespace TestClient
                 // var suffixesToRemove = new[] {"CIB03"};
                 var connectionManager = new OracleConnectionManager(connectionString);
                 var repo = new OracleRepository(connectionManager);
-                var table = repo.GetTableInfo("CIB_CUSTOMERS");
+                var cibSchema = (await repo.GetSchemas()).FirstOrDefault(schema => schema == "CIB");
+                var customersTable = (await repo.GetTables(cibSchema)).FirstOrDefault(table => table == "CIB_CUSTOMERS");
+                var columns = await repo.GetColumns(customersTable);
+                foreach (var column in columns)
+                {
+                    Console.WriteLine(column.ToString());
+                    Console.WriteLine(column.ColumnName.ToLower().Pascalize());
+                }
+
+                Console.WriteLine($"Table In Normal Letters: {customersTable.ToLower().Pascalize()}");
+
+                var entityOptions = new EntityOptions
+                {
+                    Name = customersTable.ToLower().Pascalize(),
+                    TableOrViewName = customersTable,
+                    Namespace = "TestClient.GeneratedModels.Entities",
+                    IsTable = true,
+                    SchemaName = cibSchema,
+                };
+                foreach (var column in columns)
+                {
+                    var property = new PropertyOptions(column.ColumnName.ToLower().Pascalize(), column.ColumnName,
+                        column.DataType, column.IsPrimaryKey, column.IsRequired, column.Length, column.Precision,
+                        column.Scale, column.IsUnicode);
+                    entityOptions.Properties.Add(property);
+                }
+
+                Console.WriteLine(entityOptions.Name);
                 // var tableNames = repo.GetTableNames().Take(10);
                 // Console.WriteLine("some_title for something".Pascalize());
                 // foreach (var tableName in tableNames)

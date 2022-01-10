@@ -11,14 +11,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="">
+    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="fix OracleRepository.cs methods and add new ones">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Table.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Configurations/TestConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Configurations/TestConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Entities/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Entities/Test.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +38,10 @@
     <option name="projectConfigVersion" value="4" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/37/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Projects/NetCore/constructor/src/TestClient/Entities/Test.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/GeneratedModels/TestClient/CibContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/EntityConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Projects/NetCore/constructor/src/TestClient/Configurations/TestConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/Context.cs" root0="SKIP_HIGHLIGHTING" />
@@ -137,7 +137,7 @@
       <workItem from="1640871740556" duration="1504000" />
       <workItem from="1641304330465" duration="1385000" />
       <workItem from="1641391438659" duration="1012000" />
-      <workItem from="1641825894193" duration="4036000" />
+      <workItem from="1641825894193" duration="4946000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -251,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641305095242</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix OracleRepository.cs methods and add new ones">
+      <created>1641830001627</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1641830001627</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,23 +293,37 @@
     <MESSAGE value="CibContext.cs" />
     <MESSAGE value="separate existing interfaces and implementations" />
     <MESSAGE value="structure database stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure database stuff" />
+    <MESSAGE value="fix OracleRepository.cs methods and add new ones" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix OracleRepository.cs methods and add new ones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
-          <line>80</line>
-          <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="80" containingFunctionPresentation="method 'Main'">
+          <line>93</line>
+          <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="93" containingFunctionPresentation="method 'Main'">
             <startOffsets>
-              <option value="3379" />
+              <option value="4049" />
             </startOffsets>
             <endOffsets>
-              <option value="3426" />
+              <option value="4393" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
+          <line>109</line>
+          <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="109" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="4844" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4882" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

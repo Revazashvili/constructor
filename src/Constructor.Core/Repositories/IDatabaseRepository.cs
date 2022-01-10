@@ -9,6 +9,6 @@ namespace Constructor.Core.Repositories
         Task<IEnumerable<string>> GetSchemas();
         Task<IEnumerable<string>> GetTables(string schema);
         Task<IEnumerable<string>> GetViews(string schema);
-        Table GetTableInfo(string tableName);
+        Task<IEnumerable<Column>> GetColumns(string table);
     }
 }

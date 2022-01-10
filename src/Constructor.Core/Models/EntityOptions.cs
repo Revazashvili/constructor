@@ -19,7 +19,7 @@ namespace Constructor.Core.Models
         public string Namespace { get; set; }
         public string SchemaName { get; set; }
         public bool IsTable { get; set; }
-        public IEnumerable<PropertyOptions> Properties { get; set; }
+        public ICollection<PropertyOptions> Properties { get; set; }
         public IEnumerable<string> OneEntities { get; set; }
         public IEnumerable<string> CollectionEntities { get; set; }
         public IEnumerable<OneToOneRelationship> OneToOneRelationships { get; set; }

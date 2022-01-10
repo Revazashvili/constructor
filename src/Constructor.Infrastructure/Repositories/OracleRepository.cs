@@ -44,7 +44,7 @@ namespace Constructor.Infrastructure.Repositories
             return result;
         }
 
-        public Table GetTableInfo(string tableName)
+        public async Task<IEnumerable<Column>> GetColumns(string table)
         {
             var connection = _connectionManager.OpenConnection();
             const string sql =
@@ -55,9 +55,9 @@ namespace Constructor.Infrastructure.Repositories
                     WHERE cons.constraint_type = 'P' and cols.COLUMN_NAME=t.COLUMN_NAME AND table_name = UPPER(:tableName )) then 1 else 0 end IsPrimaryKey,
                     0 as IsUnicode
                      from user_tab_columns t where t.TABLE_NAME=:tableName ";
-            var columns = connection.Query<Column>(sql, new { tableName }).AsEnumerable();
+            var columns = await connection.QueryAsync<Column>(sql, new { tableName = table });
             _connectionManager.CloseConnection(connection);
-            return new Table(columns);
+            return columns;
         }
     }
 }

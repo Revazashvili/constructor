@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore.Metadata;
+
 namespace Constructor.Core.Models
 {
     public class Column
@@ -11,5 +13,10 @@ namespace Constructor.Core.Models
         public bool IsRequired { get; set; }
         public int Length { get; set; }
         public bool IsUnicode { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id: {ColumnId}; Name {ColumnName}; IsPrimaryKey: {IsPrimaryKey}";
+        }
     }
 }
