@@ -11,18 +11,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="separate existing interfaces and implementations">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/git_toolbox_prj.xml" afterDir="false" />
+    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Infrastructure/Constructor.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Constructor.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/IConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Managers/IConnectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/IDatabaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/Models/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Table.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/OracleConnectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Managers/OracleConnectionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/OracleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Table.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Configurations/TestConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Configurations/TestConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Entities/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/GeneratedModels/Entities/Test.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/TestClient.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +35,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="4" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Constructor.Core/Templates/Entity.cs" root0="SKIP_HIGHLIGHTING" />
@@ -135,7 +135,9 @@
       <workItem from="1639849354474" duration="1087000" />
       <workItem from="1640179640376" duration="779000" />
       <workItem from="1640871740556" duration="1504000" />
-      <workItem from="1641304330465" duration="559000" />
+      <workItem from="1641304330465" duration="1385000" />
+      <workItem from="1641391438659" duration="1012000" />
+      <workItem from="1641825894193" duration="4036000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -242,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641304588085</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="structure database stuff">
+      <created>1641305095242</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1641305095242</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +285,26 @@
     <MESSAGE value="set up Context.tt" />
     <MESSAGE value="CibContext.cs" />
     <MESSAGE value="separate existing interfaces and implementations" />
-    <option name="LAST_COMMIT_MESSAGE" value="separate existing interfaces and implementations" />
+    <MESSAGE value="structure database stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="structure database stuff" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
+          <line>80</line>
+          <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="80" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="3379" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3426" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

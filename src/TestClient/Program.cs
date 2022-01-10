@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Text.Json;
+using System.Threading.Tasks;
 using Constructor.Core;
 using Constructor.Core.Constructors;
 using Constructor.Core.Creators;
@@ -13,35 +15,35 @@ using Constructor.Infrastructure.Managers;
 using Constructor.Infrastructure.Providers;
 using Constructor.Infrastructure.Repositories;
 
-const string entitiesFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Entities";
-const string configurationFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Configurations";
-const string contextFolderPath = @"D:\Projects\constructor\src\GeneratedModels\TestClient";
-Console.WriteLine("Start building...");
-var entityOptionsProvider = new EntityOptionsProvider();
-var entityOptions = entityOptionsProvider.Provide();
-IFileManager fileManager = new FileManager();
-
-IEntityConstructor entityConstructor = new EntityConstructor();
-IEntityCreator entityCreator = new EntityCreator(entityConstructor, fileManager);
-
-IEntityConfigurationConstructor entityConfigurationConstructor = new EntityConfigurationConstructor();
-IEntityConfigurationCreator entityConfigurationCreator = new EntityConfigurationCreator(entityConfigurationConstructor,fileManager);
-
-IContextConstructor contextConstructor = new ContextConstructor();
-IContextCreator contextCreator = new ContextCreator(contextConstructor,fileManager);
-
-
-entityCreator.Create(new CreateEntityOptions(entityOptions, entitiesFolderPath));
-entityConfigurationCreator.Create(new CreateEntityConfigurationOptions(entityOptions, configurationFolderPath));
-contextCreator.Create(new CreateContextOptions(new ContextOptions
-{
-    Name = "CibContext",
-    Namespace = "GeneratedModels.TestClient",
-    EntitiesNamespace = "TestClient.GeneratedModels.Entities",
-    Entities = new[] {"Test", "Customer", "CustomerResponse"}
-}, contextFolderPath));
-
-Console.WriteLine("Done");
+// const string entitiesFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Entities";
+// const string configurationFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Configurations";
+// const string contextFolderPath = @"D:\Projects\constructor\src\GeneratedModels\TestClient";
+// Console.WriteLine("Start building...");
+// var entityOptionsProvider = new EntityOptionsProvider();
+// var entityOptions = entityOptionsProvider.Provide();
+// IFileManager fileManager = new FileManager();
+//
+// IEntityConstructor entityConstructor = new EntityConstructor();
+// IEntityCreator entityCreator = new EntityCreator(entityConstructor, fileManager);
+//
+// IEntityConfigurationConstructor entityConfigurationConstructor = new EntityConfigurationConstructor();
+// IEntityConfigurationCreator entityConfigurationCreator = new EntityConfigurationCreator(entityConfigurationConstructor,fileManager);
+//
+// IContextConstructor contextConstructor = new ContextConstructor();
+// IContextCreator contextCreator = new ContextCreator(contextConstructor,fileManager);
+//
+//
+// entityCreator.Create(new CreateEntityOptions(entityOptions, entitiesFolderPath));
+// entityConfigurationCreator.Create(new CreateEntityConfigurationOptions(entityOptions, configurationFolderPath));
+// contextCreator.Create(new CreateContextOptions(new ContextOptions
+// {
+//     Name = "CibContext",
+//     Namespace = "GeneratedModels.TestClient",
+//     EntitiesNamespace = "TestClient.GeneratedModels.Entities",
+//     Entities = new[] {"Test", "Customer", "CustomerResponse"}
+// }, contextFolderPath));
+//
+// Console.WriteLine("Done");
 
 // var x = new EntityOptions
 // {
@@ -64,9 +66,9 @@ Console.WriteLine("Done");
 
 namespace TestClient
 {
-    internal static class Program
+    static class Program
     {
-        private static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             try
             {
@@ -76,6 +78,7 @@ namespace TestClient
                 // var suffixesToRemove = new[] {"CIB03"};
                 var connectionManager = new OracleConnectionManager(connectionString);
                 var repo = new OracleRepository(connectionManager);
+                var table = repo.GetTableInfo("CIB_CUSTOMERS");
                 // var tableNames = repo.GetTableNames().Take(10);
                 // Console.WriteLine("some_title for something".Pascalize());
                 // foreach (var tableName in tableNames)
@@ -84,8 +87,8 @@ namespace TestClient
                 //         .RemoveSuffixes(suffixesToRemove));
                 // }
 
-                var table = repo.GetTableInfo("CIB_ONBOARDING_PRODUCT_TITLE");
-                Console.WriteLine(JsonSerializer.Serialize(table));
+                // var table = repo.GetTableInfo("CIB_ONBOARDING_PRODUCT_TITLE");
+                // Console.WriteLine(JsonSerializer.Serialize(table));
 
                 //Console.WriteLine("CUSTOMERS".Pluralize().ToUpper());
             }

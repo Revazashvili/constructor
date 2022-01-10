@@ -9,6 +9,8 @@ namespace Constructor.Core.Models
             Columns = columns;
         }
 
+        public string Name { get; set; }
+        public string Schema { get; set; }
         public IEnumerable<Column> Columns { get; }
     }
 }

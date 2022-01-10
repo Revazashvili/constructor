@@ -10,5 +10,6 @@ namespace Constructor.Core.Models
         public bool IsPrimaryKey { get; set; }
         public bool IsRequired { get; set; }
         public int Length { get; set; }
+        public bool IsUnicode { get; set; }
     }
 }
