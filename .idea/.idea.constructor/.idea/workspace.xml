@@ -11,14 +11,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="fix OracleRepository.cs methods and add new ones">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/Column.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Models/PropertyOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Core/Repositories/IDatabaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.Infrastructure/Repositories/OracleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +67,24 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.TestClient">
+    <configuration name="Constructor.App" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/Constructor.App/Constructor.App.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="FsharpTestClient" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -137,7 +148,7 @@
       <workItem from="1640871740556" duration="1504000" />
       <workItem from="1641304330465" duration="1385000" />
       <workItem from="1641391438659" duration="1012000" />
-      <workItem from="1641825894193" duration="4946000" />
+      <workItem from="1641825894193" duration="5281000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -258,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641830001627</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="some more changes">
+      <created>1641831220579</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1641831220579</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,33 +312,21 @@
     <MESSAGE value="separate existing interfaces and implementations" />
     <MESSAGE value="structure database stuff" />
     <MESSAGE value="fix OracleRepository.cs methods and add new ones" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix OracleRepository.cs methods and add new ones" />
+    <MESSAGE value="some more changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some more changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
-          <line>93</line>
-          <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="93" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="4049" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4393" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
           <line>109</line>
           <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="109" containingFunctionPresentation="method 'Main'">
             <startOffsets>
-              <option value="4844" />
+              <option value="4841" />
             </startOffsets>
             <endOffsets>
-              <option value="4882" />
+              <option value="4879" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
