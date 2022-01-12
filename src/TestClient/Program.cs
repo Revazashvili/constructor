@@ -74,8 +74,8 @@ namespace TestClient
         {
             try
             {
-                const string connectionString =
-                    @"Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=ibank-db-test.bog.ge)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=CIB03)));password=cib;user id=CIB";
+                
+                string connectionString = Environment.GetEnvironmentVariable("CONSTRUCTOR_ORACLE_CONNECTION_STRING",EnvironmentVariableTarget.User)!;
                 // var prefixesToRemove = new[] {"CIB", "ZZ"};
                 // var suffixesToRemove = new[] {"CIB03"};
                 var connectionManager = new OracleConnectionManager(connectionString);
