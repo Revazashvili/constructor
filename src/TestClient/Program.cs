@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Constructor.Core;
 using Constructor.Core.Constructors;
@@ -16,6 +18,9 @@ using Constructor.Infrastructure.Managers;
 using Constructor.Infrastructure.Providers;
 using Constructor.Infrastructure.Repositories;
 using Humanizer;
+using TestClient.Constants;
+using TestClient.Models;
+using static System.String;
 
 // const string entitiesFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Entities";
 // const string configurationFolderPath = @"D:\Projects\constructor\src\TestClient\GeneratedModels\Configurations";
@@ -70,11 +75,26 @@ namespace TestClient
 {
     static class Program
     {
+        public static void WriteToFileAsJson()
+        {
+            string connectionString = Environment.GetEnvironmentVariable("CONSTRUCTOR_ORACLE_CONNECTION_STRING",EnvironmentVariableTarget.User)!;
+            var configuration = new Configuration
+            {
+                Database = new DatabaseConfiguration(DatabaseProvider.Oracle,connectionString),
+                Schema = new SchemaConfiguration(true,Enumerable.Empty<string>()),
+                Table = new TableConfiguration(true,Enumerable.Empty<string>(),Empty,Empty),
+                Context = new ContextConfiguration("TestClient.GeneratedModels.Context"),
+                Entity = new EntityConfiguration("TestClient.GeneratedModels.Entities")
+            };
+
+            var configurationAsJson = JsonSerializer.Serialize(configuration);
+            File.WriteAllText(@"D:\Projects\constructor\src\TestClient\Configuration.json",configurationAsJson);
+        }
         public static async Task Main(string[] args)
         {
             try
             {
-                
+                WriteToFileAsJson();
                 string connectionString = Environment.GetEnvironmentVariable("CONSTRUCTOR_ORACLE_CONNECTION_STRING",EnvironmentVariableTarget.User)!;
                 // var prefixesToRemove = new[] {"CIB", "ZZ"};
                 // var suffixesToRemove = new[] {"CIB03"};

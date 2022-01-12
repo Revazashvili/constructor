@@ -12,8 +12,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="add app and command line parser functionality">
+    <list default="true" id="7bf3d222-279f-417e-ad3d-be43c2210f97" name="Changes" comment="remove FsharpTestClient.fsproj">
+      <change afterPath="$PROJECT_DIR$/src/Constructor.App/Constants/DatabaseProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.App/Models/Configuration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.App/Models/ContextConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.App/Models/DatabaseConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.App/Models/EntityConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.App/Models/SchemaConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Constructor.App/Models/TableConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/Configuration.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/ConstantsConfiguration/DatabaseProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/Configuration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/ContextConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/DatabaseConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/EntityConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/SchemaConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient/Models/TableConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.constructor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constructor.App/Handlers/ScaffoldHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constructor.App/Handlers/ScaffoldHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestClient/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +169,7 @@
       <workItem from="1641304330465" duration="1385000" />
       <workItem from="1641391438659" duration="1012000" />
       <workItem from="1641825894193" duration="5281000" />
-      <workItem from="1641967725133" duration="629000" />
+      <workItem from="1641967725133" duration="3223000" />
     </task>
     <task id="LOCAL-00001" summary="add sln file">
       <created>1638269288024</created>
@@ -288,7 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1641968039995</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="get connection string from environment variables">
+      <created>1641968560122</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1641968560122</updated>
+    </task>
+    <task id="LOCAL-00021" summary="remove FsharpTestClient.fsproj">
+      <created>1641968648172</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1641968648172</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,23 +356,51 @@
     <MESSAGE value="fix OracleRepository.cs methods and add new ones" />
     <MESSAGE value="some more changes" />
     <MESSAGE value="add app and command line parser functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add app and command line parser functionality" />
+    <MESSAGE value="get connection string from environment variables" />
+    <MESSAGE value="remove FsharpTestClient.fsproj" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove FsharpTestClient.fsproj" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
-          <line>111</line>
+          <line>129</line>
           <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="109" containingFunctionPresentation="method 'Main'">
             <startOffsets>
-              <option value="5051" />
+              <option value="5878" />
             </startOffsets>
             <endOffsets>
-              <option value="5089" />
+              <option value="5916" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
+          <line>96</line>
+          <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="76" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="4003" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4003" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/TestClient/Program.cs</url>
+          <line>78</line>
+          <properties documentPath="D:\Projects\constructor\src\TestClient\Program.cs" initialLine="78" containingFunctionPresentation="method 'WriteToFileAsJson'">
+            <startOffsets>
+              <option value="3014" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3015" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
